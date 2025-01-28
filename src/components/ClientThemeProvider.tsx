@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
-import { ThemeProvider } from "./theme-provider";
+import { ReactNode } from "react"
+import { ThemeProvider } from "./theme-provider"
 
 interface ClientThemeProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const ClientThemeProvider = ({ children }: ClientThemeProviderProps) => {
@@ -15,7 +15,7 @@ const ClientThemeProvider = ({ children }: ClientThemeProviderProps) => {
     >
       {children}
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default ClientThemeProvider;
+export default ClientThemeProvider
