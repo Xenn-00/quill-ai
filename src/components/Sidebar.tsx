@@ -51,7 +51,7 @@ const Sidebar = () => {
             onClick={handleNewChat}
             className="w-full border-[#1b1b1b] bg-black/30 text-gray-400 shadow-sm transition-all duration-200 hover:bg-black/10 hover:shadow"
           >
-            <PlusIcon /> New Chat
+            <PlusIcon /> Create Chat
           </Button>
         </div>
         <div className="flex-1 space-y-2.5 overflow-y-auto p-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-black/20">

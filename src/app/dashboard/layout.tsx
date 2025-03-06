@@ -12,9 +12,9 @@ export default function DashboardLayout({ children }: PropsWithChildren) {
         <Authenticated>
           <Sidebar />
         </Authenticated>
-        <div className="flex-1">
+        <div className="flex min-w-0 flex-1 flex-col">
           <Header />
-          <main>{children}</main>
+          <main className="flex-1 overflow-y-auto">{children}</main>
         </div>
       </div>
     </NavigationProvider>
