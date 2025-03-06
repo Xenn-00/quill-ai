@@ -59,3 +59,27 @@ export const deleteChat = mutation({
     await ctx.db.delete(args.id)
   },
 })
+
+export const getChat = query({
+  args: {
+    chatId: v.id("chats"),
+    userId: v.string(),
+  },
+  handler: async (ctx, args) => {
+    try {
+      const chat = await ctx.db.get(args.chatId)
+      if (!chat || chat.userId !== args.userId) {
+        console.log("❌ Chat not found or unauthorized", {
+          chatExists: !!chat,
+          chatUserId: chat?.userId,
+          requestUserId: args.userId,
+        })
+        return null
+      }
+      return chat
+    } catch (error) {
+      console.error("🔥 Error in getChat:", error)
+      return null
+    }
+  },
+})

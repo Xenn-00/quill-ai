@@ -27,7 +27,7 @@ const ChatRow = ({
   }
   return (
     <div
-      className="group cursor-pointer rounded-xl border border-[#1b1b1b]/20 bg-black/30 text-gray-400 shadow-sm backdrop-blur-sm transition-all duration-200 hover:bg-black/10 hover:shadow-md"
+      className="group cursor-pointer rounded-xl border border-[#1b1b1b]/20 bg-black/50 text-gray-400 shadow-lg backdrop-blur-sm transition-all duration-200 hover:bg-black/10 hover:shadow-md"
       onClick={handleClick}
     >
       <div className="translate-y-1 p-2">
@@ -39,7 +39,7 @@ const ChatRow = ({
                 {lastMessage.content.replace(/\\n/g, "\n")}
               </>
             ) : (
-              <span className="text-gray-400">No conversation yet</span>
+              <span className="text-gray-400">New Chat</span>
             )}
           </p>
           <Button
